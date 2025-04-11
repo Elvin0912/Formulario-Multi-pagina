@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Multi-Página</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <h1></h1>
+  <div id="form">
+   
+    <div class="page active" id="page1">
+      <h2> Datos Personales</h2>
+      <label>Nombre: <input type="text" id="nombre"></label><br>
+      <label>Apellido: <input type="text" id="apellido"></label><br>
+      <label>Edad: <input type="number" id="edad"></label><br>
+    </div>
+
+  
+    <div class="page" id="page2">
+      <h2> Familiares</h2>
+      <div id="familiares"></div>
+      <input type="text" placeholder="Nombre" id="fam_nombre">
+      <input type="text" placeholder="Parentesco" id="fam_parentesco">
+      <input type="number" placeholder="Edad" id="fam_edad">
+      <button onclick="agregarFamiliar()">Agregar Familiar</button>
+    </div>
+
+   
+    <div class="page" id="page3">
+      <h2> Pre-Existentes</h2>
+      <div id="condiciones"></div>
+      <input type="text" placeholder="Enfermedad" id="cond_enfermedad">
+      <input type="text" placeholder="Tiempo con la enfermedad" id="cond_tiempo">
+      <button onclick="agregarCondicion()">Agregar Condición</button>
+    </div>
+
+  
+    <div class="page" id="page4">
+      <h2> Internamientos Realizados</h2>
+      <div id="internamientos"></div>
+      <input type="date" id="int_fecha">
+      <input type="text" placeholder="Centro Médico" id="int_centro">
+      <input type="text" placeholder="Diagnóstico" id="int_diagnostico">
+      <button onclick="agregarInternamiento()">Agregar Internamiento</button>
+    </div>
+
+   
+    <div class="page" id="page5">
+      <h2> Resumen de Datos</h2>
+      <pre id="resumen"></pre>
+    </div>
+
+   
+    <button onclick="cambiarPagina(-1)">Anterior</button>
+    <button onclick="cambiarPagina(1)">Siguiente</button>
+    <button onclick="grabarDatos()">Grabar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
